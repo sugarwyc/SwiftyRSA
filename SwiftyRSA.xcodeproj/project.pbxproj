@@ -652,7 +652,6 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = H7TK3C9688;
 				INFOPLIST_FILE = SwiftyRSATests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -670,7 +669,6 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				DEVELOPMENT_TEAM = H7TK3C9688;
 				INFOPLIST_FILE = SwiftyRSATests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
