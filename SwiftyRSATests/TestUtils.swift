@@ -13,6 +13,8 @@ struct TestError: Error {
     let description: String
 }
 
+// swiftlint:disable force_try
+// swiftlint:disable force_unwrapping
 @objc public class TestUtils: NSObject {
     
     static let bundle = Bundle(for: TestUtils.self)
@@ -50,3 +52,5 @@ struct TestError: Error {
         return Data(bytes: int8Bytes, count: capacity)
     }
 }
+// swiftlint:enable force_try
+// swiftlint:enable force_unwrapping

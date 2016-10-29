@@ -1,0 +1,44 @@
+opt_out_usage
+default_platform :ios
+skip_docs
+
+platform :ios do
+
+  desc "Lints the project"
+  lane :lint do
+    swiftlint
+  end
+
+  desc "Runs all the tests"
+  lane :test do
+
+    # iOS
+    scan(
+        scheme: 'SwiftyRSA iOS',
+        custom_report_file_name: 'iOS.xml',
+        devices: [
+            'iPhone 5s (8.4)',
+            'iPhone 5 (9.0)',
+            'iPhone 5 (10.0)'
+        ]
+    )
+
+    # tvOS
+    scan(
+        scheme: 'SwiftyRSA tvOS',
+        custom_report_file_name: 'tvOS.xml',
+        devices: [
+            'Apple TV 1080p (10.0)'
+        ]
+    )
+
+    # watchOS
+    scan(
+        scheme: 'SwiftyRSA watchOS',
+        custom_report_file_name: 'watchOS.xml',
+        devices: [
+            'iPhone 6 (10.0) + Apple Watch - 38mm (3.0)'
+        ]
+    )
+  end
+end
