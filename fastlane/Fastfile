@@ -34,14 +34,11 @@ platform :ios do
         ]
     )
 
-    # watchOS
-    scan(
+    # watchOS (smoke test)
+    xcodebuild(
         scheme: 'SwiftyRSA watchOS',
         sdk: 'watchsimulator3.0',
-        custom_report_file_name: 'watchOS.xml',
-        devices: [
-            'iPhone 6 (10.0) + Apple Watch - 38mm (3.0)'
-        ]
+        configuration: 'Debug'
     )
   end
 end
