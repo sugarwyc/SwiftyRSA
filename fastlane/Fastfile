@@ -15,6 +15,7 @@ platform :ios do
     # iOS
     scan(
         scheme: 'SwiftyRSA iOS',
+        sdk: 'iphonesimulator10.0',
         custom_report_file_name: 'iOS.xml',
         devices: [
             #'iPhone 6 (8.4)',
@@ -26,6 +27,7 @@ platform :ios do
     # tvOS
     scan(
         scheme: 'SwiftyRSA tvOS',
+        sdk: 'appletvsimulator10.0',
         custom_report_file_name: 'tvOS.xml',
         devices: [
             'Apple TV 1080p (10.0)'
@@ -35,6 +37,7 @@ platform :ios do
     # watchOS
     scan(
         scheme: 'SwiftyRSA watchOS',
+        sdk: 'watchsimulator3.0',
         custom_report_file_name: 'watchOS.xml',
         devices: [
             'iPhone 6 (10.0) + Apple Watch - 38mm (3.0)'
