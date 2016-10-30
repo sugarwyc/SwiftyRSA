@@ -17,7 +17,7 @@ platform :ios do
         scheme: 'SwiftyRSA iOS',
         custom_report_file_name: 'iOS.xml',
         devices: [
-            'iPhone 6 (8.4)',
+            #'iPhone 6 (8.4)',
             'iPhone 6 (9.0)',
             'iPhone 6 (10.0)'
         ]
