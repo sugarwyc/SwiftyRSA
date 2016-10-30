@@ -46,10 +46,11 @@ struct TestError: Error {
     }
     
     static public func randomData(count: Int) -> Data {
-        let bytes = [Int](repeating: 0, count: count).map { _ in UInt8(arc4random_uniform(256)) }
-        let capacity = bytes.count * MemoryLayout<UInt8>.size
-        let int8Bytes = UnsafeRawPointer(UnsafePointer<UInt8>(bytes))
-        return Data(bytes: int8Bytes, count: capacity)
+        var data = Data(capacity: count)
+        data.withUnsafeMutableBytes { (bytes: UnsafeMutablePointer<UInt8>) -> Void in
+            _ = SecRandomCopyBytes(kSecRandomDefault, count, bytes)
+        }
+        return data
     }
 }
 // swiftlint:enable force_try
